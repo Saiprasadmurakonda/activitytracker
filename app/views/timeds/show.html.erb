@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @timed %>
+
+<div>
+  <%= link_to "Edit this timed", edit_timed_path(@timed) %> |
+  <%= link_to "Back to timeds", timeds_path %>
+
+  <%= button_to "Destroy this timed", @timed, method: :delete %>
+</div>

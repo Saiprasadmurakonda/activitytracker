@@ -1,0 +1,22 @@
+<%= form_with(model: blocked) do |form| %>
+  <% if blocked.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(blocked.errors.count, "error") %> prohibited this blocked from being saved:</h2>
+
+      <ul>
+        <% blocked.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :blocked_site, style: "display: block" %>
+    <%= form.text_field :blocked_site %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

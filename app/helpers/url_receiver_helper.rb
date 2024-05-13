@@ -1,0 +1,2 @@
+module UrlReceiverHelper
+end

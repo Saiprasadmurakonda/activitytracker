@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  timed_site: MyString
+  timeinmin: 2024-05-12 22:41:20
+
+two:
+  timed_site: MyString
+  timeinmin: 2024-05-12 22:41:20

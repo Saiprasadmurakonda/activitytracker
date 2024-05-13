@@ -1,0 +1,27 @@
+<%= form_with(model: timed) do |form| %>
+  <% if timed.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(timed.errors.count, "error") %> prohibited this timed from being saved:</h2>
+
+      <ul>
+        <% timed.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :timed_site, style: "display: block" %>
+    <%= form.text_field :timed_site %>
+  </div>
+
+  <div>
+    <%= form.label :timeinmin, style: "display: block" %>
+    <%= form.time_field :timeinmin %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

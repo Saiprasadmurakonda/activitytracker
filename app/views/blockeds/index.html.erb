@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Blockeds</h1>
+
+<div id="blockeds">
+  <% @blockeds.each do |blocked| %>
+    <%= render blocked %>
+    <p>
+      <%= link_to "Show this blocked", blocked %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New blocked", new_blocked_path %>

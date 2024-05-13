@@ -1,0 +1,37 @@
+<%= form_with(model: individual) do |form| %>
+  <% if individual.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(individual.errors.count, "error") %> prohibited this individual from being saved:</h2>
+
+      <ul>
+        <% individual.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :website, style: "display: block" %>
+    <%= form.text_field :website %>
+  </div>
+
+  <div>
+    <%= form.label :last_in, style: "display: block" %>
+    <%= form.datetime_field :last_in %>
+  </div>
+
+  <div>
+    <%= form.label :last_out, style: "display: block" %>
+    <%= form.datetime_field :last_out %>
+  </div>
+
+  <div>
+    <%= form.label :time_spent, style: "display: block" %>
+    <%= form.text_field :time_spent %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

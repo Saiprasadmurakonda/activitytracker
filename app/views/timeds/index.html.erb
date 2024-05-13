@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Timeds</h1>
+
+<div id="timeds">
+  <% @timeds.each do |timed| %>
+    <%= render timed %>
+    <p>
+      <%= link_to "Show this timed", timed %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New timed", new_timed_path %>
