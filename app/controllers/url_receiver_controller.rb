@@ -1,25 +1,18 @@
 # app/controllers/url_receiver_controller.rb
 class UrlReceiverController < ApplicationController
   skip_before_action :verify_authenticity_token
+  def check_url
+    url = params[:url]
+    block = Blocked.exists?(blocked_site: url)
+    render json: { blocked: block }
+  end
 
   def receive_url
     if request.post?
-       data = JSON.parse(request.body.read)
+      data = JSON.parse(request.body.read)
       url = data['url']
-      message = data['message']
-      
-      if message == "closed"
-        individual = Individual.find_by(website: url)
-        if individual
-          individual.update(last_out: Time.now)
-          render json: { message: "last_out updated successfully" }, status: :ok
-        else
-          render json: { error: "Individual not found" }, status: :not_found
-        end
-      else
-        individual = Individual.create(website: url, last_in: Time.now)
-        render json: { message: "Individual created successfully" }, status: :created
-      end
+      individual = Individual.create(website: url, last_in: Time.now)
+      render json: { message: "Individual created successfully" }, status: :created
     elsif request.get?
       @url = params[:url]
     end

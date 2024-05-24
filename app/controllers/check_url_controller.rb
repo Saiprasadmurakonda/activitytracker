@@ -1,0 +1,2 @@
+class CheckUrlController < ApplicationController
+end
