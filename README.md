@@ -1,6 +1,6 @@
 Welcome to activity tracker
 
-Watch the video at ** https://youtu.be/jSK1tLD6hoc?si=pOVvBG7EbnVPU5-U**
+For explanition about project and outputs, Watch the video at ** https://youtu.be/jSK1tLD6hoc?si=pOVvBG7EbnVPU5-U**  
 
 1) Download this application and add it to c drive. So its path is C:/track/activitytracker
 
