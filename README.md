@@ -1,5 +1,7 @@
 Welcome to activity tracker
 
+Watch the video at ** https://youtu.be/jSK1tLD6hoc?si=pOVvBG7EbnVPU5-U**
+
 1) Download this application and add it to c drive. So its path is C:/track/activitytracker
 
 2) Go to chrome://extensions/ and turn on developer mode
